@@ -63,7 +63,7 @@ func main() {
 	}
 
 	h := volume.NewHandler(lvm)
-	if err := h.ServeUnix("root", lvmPluginSocketPath); err != nil {
+	if err := h.ServeUnix("lvm", 0); err != nil {
 		logrus.Fatal(err)
 	}
 }
